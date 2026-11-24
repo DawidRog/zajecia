@@ -342,6 +342,9 @@ div.tocify {
 <li>
   <a href="cos2.html">cos2</a>
 </li>
+<li>
+  <a href="cv.html">cv</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -364,7 +367,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -375,8 +378,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -389,9 +392,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>workflow/</code> <span
@@ -414,18 +417,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -516,15 +522,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDawidRogzajeciatree08e1c4672d1ea713d6d0dd628620fce3ff7cf984targetblank08e1c46a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDawidRogzajeciatree0a43591406e2b38b98e0553a299dfd6a07a5caaatargetblank0a43591a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/DawidRog/zajecia/tree/08e1c4672d1ea713d6d0dd628620fce3ff7cf984" target="_blank">08e1c46</a>
+<a href="https://github.com/DawidRog/zajecia/tree/0a43591406e2b38b98e0553a299dfd6a07a5caaa" target="_blank">0a43591</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomDawidRogzajeciatree08e1c4672d1ea713d6d0dd628620fce3ff7cf984targetblank08e1c46a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomDawidRogzajeciatree0a43591406e2b38b98e0553a299dfd6a07a5caaatargetblank0a43591a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -534,7 +540,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/DawidRog/zajecia/tree/08e1c4672d1ea713d6d0dd628620fce3ff7cf984" target="_blank">08e1c46</a>.
+<a href="https://github.com/DawidRog/zajecia/tree/0a43591406e2b38b98e0553a299dfd6a07a5caaa" target="_blank">0a43591</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -573,6 +579,7 @@ Unstaged changes:
     Deleted:    data/README.md
     Deleted:    docs/.nojekyll
     Deleted:    output/README.md
+    Modified:   workflow/analysis/cv.Rmd
 
 </code></pre>
 <p>
@@ -617,6 +624,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DawidRog/zajecia/e73afca59ab0566674f0249b77021b20c1a9cfce/workflow/docs/cv.html" target="_blank">e73afca</a>
+</td>
+<td>
+DawidRog
+</td>
+<td>
+2026-11-24
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd

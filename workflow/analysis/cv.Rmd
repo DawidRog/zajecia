@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Imię Nazwisko
+# Imię Nazwisko 
 
 **Email:** twoj.email@example.com
 **Telefon:** +48 123 456 789
